@@ -19,7 +19,8 @@ function App() {
 
   const {data , isLoading , isError , error} = useQuery({
     queryKey: ["products"] , 
-    queryFn: fetchUsers
+    queryFn: fetchUsers,
+    staleTime: 4000
   })
 
   if (isLoading) return     <Spinner animation="border" role="status">
